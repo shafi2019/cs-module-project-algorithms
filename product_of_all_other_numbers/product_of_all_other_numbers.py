@@ -3,9 +3,15 @@ Input: a List of integers
 Returns: a List of integers
 '''
 def product_of_all_other_numbers(arr):
-    # Your code here
+    # Start with 1. If we start with 0 it will multiply by 0
+    result = 1
 
-    pass
+    # This while loop through our array, and multiply each value with the result
+    for x in arr:
+        # After the multiplication, we'll have a new result so keep multiplying to, until we run out of elements in our array
+        result *= x
+        # Our result (total) will then be divided by the number in our list. 
+    return [result / x for x in arr]
 
 
 if __name__ == '__main__':
